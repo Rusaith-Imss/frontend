@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --table-border-color: #e5e7eb;
+  --table-header-bg: #f3f4f6;
+  --table-row-hover-bg: #f9fafb;
+  --chart-line-color: #4f46e5;
+  --chart-fill-color: rgba(79, 70, 229, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #f9fafb;
+    --table-border-color: #374151;
+    --table-header-bg: #4b5563;
+    --table-row-hover-bg: #6b7280;
+    --chart-line-color: #93c5fd;
+    --chart-fill-color: rgba(147, 197, 253, 0.2);
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
